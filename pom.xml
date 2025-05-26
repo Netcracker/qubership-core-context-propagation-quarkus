@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <quarkus.version>3.15.1</quarkus.version>
+        <quarkus.version>3.15.5</quarkus.version>
         <maven.compiler.release>17</maven.compiler.release>
 
     </properties>
