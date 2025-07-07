@@ -21,7 +21,7 @@
         <wagon-provider-api.version>3.5.3</wagon-provider-api.version>
 
         <!-- need to be updated together-->
-        <okhttp.version>4.12.0</okhttp.version>
+        <okhttp.version>5.1.0</okhttp.version>
         <okio.version>3.9.1</okio.version>
 
         <slf4j.log4j12.version>2.0.17</slf4j.log4j12.version>
