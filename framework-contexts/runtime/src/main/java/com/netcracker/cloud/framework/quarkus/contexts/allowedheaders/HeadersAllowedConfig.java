@@ -7,12 +7,12 @@ import io.smallrye.config.WithName;
 
 import java.util.Optional;
 
-@ConfigMapping
+@ConfigMapping(prefix = "headers")
 @ConfigRoot(phase = ConfigPhase.RUN_TIME)
 public interface HeadersAllowedConfig {
     /**
      * Allowed headers to propagate in contexts
      */
-    @WithName("headers.allowed")
+    @WithName("allowed")
     Optional<String> allowedHeaders();
 }
