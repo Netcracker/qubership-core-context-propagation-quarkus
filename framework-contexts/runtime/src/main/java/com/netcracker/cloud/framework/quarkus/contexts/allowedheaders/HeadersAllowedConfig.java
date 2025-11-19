@@ -6,12 +6,12 @@ import io.quarkus.runtime.annotations.ConfigRoot;
 
 import java.util.Optional;
 
-
-@ConfigRoot(name = "", phase = ConfigPhase.RUN_TIME)
-public class HeadersAllowedConfig {
+@ConfigMapping(prefix = "quarkus")
+@ConfigRoot(phase = ConfigPhase.RUN_TIME)
+public interface HeadersAllowedConfig {
     /**
      * Allowed headers to propagate in contexts
      */
-    @ConfigItem(name = "headers.allowed")
-    public Optional<String> allowedHeaders = Optional.empty();
+    @WithName("headers.allowed")
+    Optional<String> allowedHeaders();
 }
