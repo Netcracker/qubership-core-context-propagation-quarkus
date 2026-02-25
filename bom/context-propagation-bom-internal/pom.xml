@@ -16,7 +16,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <nc.context.core.version>7.4.0</nc.context.core.version>
+        <nc.context.core.version>7.4.1-SNAPSHOT</nc.context.core.version>
 
         <wagon-provider-api.version>3.5.3</wagon-provider-api.version>
 
@@ -34,6 +34,13 @@
                 <groupId>com.netcracker.cloud</groupId>
                 <artifactId>context-propagation-core</artifactId>
                 <version>${nc.context.core.version}</version>
+<!--                quarkus have 3+ version but context-propagation-core 4+ -> conflict -->
+                <exclusions>
+                    <exclusion>
+                        <groupId>jakarta.ws.rs</groupId>
+                        <artifactId>jakarta.ws.rs-api</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>com.netcracker.cloud</groupId>
